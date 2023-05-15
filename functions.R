@@ -37,7 +37,7 @@ cach.brown <- rgb(110, 95, 60, alpha=255, max=255)
 # plot.timeseries(data, "pre", "cru4", "cmip5")
 # plot.ecocrop(data, getCrop("Maize"))
 # plot.ccor(data, getCrop("Maize"))
-plot.waltherlieth(data, "cru4", NULL, title="Test")
+# plot.waltherlieth(data, "cru4", NULL, title="Test")
 
 # Variables =========================================================
 
