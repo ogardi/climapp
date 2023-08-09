@@ -32,7 +32,7 @@ cach.brown <- rgb(110, 95, 60, alpha=255, max=255)
 
 # data <- normalize.data(load.data("Lucerne (47.0N_8.3E)"))
 # data <- normalize.data(load.data("./data/Kita", lat=13.0, lon=-9.5))
-# plot.climograph(data, "tas", "cru4", title="Temperature Annual Cycle")
+# plot.climograph(data.norm, "tas", "cmip5", title="Temperature Annual Cycle")
 # plot.climograph(data, "pre", "cmip5", sce="rcp85", norm=FALSE, title="Temperature Annual Cycle")
 # plot.timeseries(data, "pre", "cru4", "cmip5")
 # plot.ecocrop(data, getCrop("Maize"))
@@ -165,7 +165,7 @@ parse.data <- function(filename) {
   
   read.table(filename) %>%
     setNames(c("year", month.abb)) %>%
-    filter(set=="cru4" & year > 1900 | year >= NORM.PERIOD[length(NORM.PERIOD)]) %>%
+    filter(set=="cru4" & year > 1900 | year >= NORM.PERIOD[1]) %>%
     pivot_longer(-year, names_to="month", values_to="value") %>%
     mutate(month = factor(month, levels=month.abb),
            set = !!set, var = !!var, sce=!!sce, mod=!!mod)
@@ -222,7 +222,7 @@ normalize.data <- function(dat, set.obs="cru4", set.mod=c("cmip5", "cmip6"), nor
   # add to modeled data and calculate norm for every entry
   dat <- dat %>%
     left_join(norm, by=c("var", "month", "mod")) %>%
-    mutate(norm = case_when(#var=="pre" ~ value * (norm.obs+1)/(norm.mod+1),
+    mutate(norm = case_when(var=="pre" ~ value * (norm.obs)/(norm.mod),
                             TRUE       ~ value + (norm.obs - norm.mod))) 
   
  # tmp <- dat %>%
@@ -432,13 +432,14 @@ plot.ecocrop <- function(dat, crop, set.obs="cru4", set.mod="cmip6"){
 
 plot.ccor <- function(dat, crop, var="tas", set.obs="cru4", set.mod="cmip6", sce="ssp370") {
   
-
-  n.months <- ceiling(crop@GMIN / 30)
+  n.months <- ceiling(crop@GMIN/30)
+  #n.months <- ceiling((crop@GMIN + crop@GMAX)/60)
   
   dat.wide <- dat %>%
     filter(set == !!set.obs | (set == set.mod & sce == !!sce)) %>%
     pivot_wider(-value, names_from = month, values_from = norm)
   
+  # last month of the wettest period of length n.month
   wettest.months <- dat.wide %>% 
     filter(var == "pre") %>%
     mutate(wet.id = apply(.[, month.abb], 1, function(x) which.max(stats::filter(x, filter=rep(1, n.months), method="conv", sides=1, circular=TRUE)))) %>%
@@ -446,6 +447,7 @@ plot.ccor <- function(dat, crop, var="tas", set.obs="cru4", set.mod="cmip6", sce
   
   dat.wide <- dat.wide %>% filter(var == !!var) %>% left_join(wettest.months) %>% drop_na(wet.id)
   
+  # avg, min, and max of the preceding n.month months
   dat.wide$wet.min <- dat.wide$wet.avg <- dat.wide$wet.max <- 0.0
   for(m in 1:12){
     dat.wide$wet.min[dat.wide$wet.id == m]     <- apply(dat.wide[dat.wide$wet.id == m, rep(month.abb, 2)[(12-n.months+1):12+m]], 1, min)
@@ -482,7 +484,7 @@ plot.ccor <- function(dat, crop, var="tas", set.obs="cru4", set.mod="cmip6", sce
       filter(stat == "wet.min" | stat == "wet.max") %>%
       filter(sce == !!sce | is.na(sce)) %>%
       ggplot(aes(x=year, y=observed)) +
-        geom_ribbon(data= . %>% filter(year > 1970), aes(ymax=Q75, ymin=Q25, fill=stat))+
+        geom_ribbon(data= . %>% filter(year >= NORM.PERIOD[1]), aes(ymax=Q75, ymin=Q25, fill=stat))+
         geom_line(aes(colour=stat)) +
         scale_colour_manual(values = c(cach.red, cach.blue), name="Growing period",
                         labels=rev(c("Coldest month", "Hottest month"))) +
@@ -499,11 +501,12 @@ plot.ccor <- function(dat, crop, var="tas", set.obs="cru4", set.mod="cmip6", sce
       filter(var == "pre") %>%
       filter(stat == "wet.avg") %>%
       filter(sce == !!sce | is.na(sce)) %>%
+      #mutate(across(Q10:observed, function(x) x * (crop@GMIN + crop@GMAX)/2)) %>%
       mutate(across(Q10:observed, function(x) x * crop@GMIN)) %>%
       ggplot(aes(x=year, y=observed)) +
         ylab("Precipitation (mm in growing season)") + xlab("Year") +
-        geom_ribbon(data= . %>% filter(year > 1980), aes(ymax=Q90, ymin=Q10), colour=cach.brown20, fill=cach.brown20) +
-        geom_smooth(data= . %>% filter(year > 1980), aes(y=Q50), colour=cach.red, se=FALSE) +
+        geom_ribbon(data= . %>% filter(year >= NORM.PERIOD[1]), aes(ymax=Q75, ymin=Q25), colour=cach.brown20, fill=cach.brown20) +
+        geom_smooth(data= . %>% filter(year >= NORM.PERIOD[1]), aes(y=Q50), colour=cach.red, se=FALSE) +
         geom_line(colour=cach.red) +
         geom_hline(yintercept=c(crop@ROPMN, crop@ROPMX), lty=2) +
         geom_hline(yintercept=c(crop@RMIN, crop@RMAX)) +
