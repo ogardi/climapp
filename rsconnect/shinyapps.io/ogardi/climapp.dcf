@@ -1,0 +1,10 @@
+name: climapp
+title:
+username: ogardi
+account: ogardi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5747854
+bundleId: 11483750
+url: https://ogardi.shinyapps.io/climapp/
+version: 1

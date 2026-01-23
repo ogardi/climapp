@@ -1,0 +1,809 @@
+{
+    "languages": ["KEY", "English", "Français", "Deutsch"],
+    "translation": [
+        {
+            "KEY":      "head:title",
+            "English":  "CARITAS climApp",
+            "Français": "CARITAS climApp",
+            "Deutsch":  "CARITAS climApp"
+        },
+        {
+            "KEY":      "head:subtitle",
+            "English":  "local climate-agri change",
+            "Français": "changement climat-agri local",
+            "Deutsch":  "lokaler Klima-Agrar-Wandel"
+        },
+        {
+            "KEY":      "head:credits",
+            "English":  "v1.2.3 / January 2026 / oliver.gardi@gmail.com",
+            "Français": "v1.2.3 / Janvier 2026 / oliver.gardi@gmail.com",
+            "Deutsch":  "v1.2.3 / Januar 2026 / oliver.gardi@gmail.com"
+        },
+        {
+            "KEY":      "head:language",
+            "English":  "Change language",
+            "Français": "Changer la langue",
+            "Deutsch":  "Sprache wechseln"
+        },
+        {
+            "KEY":      "gen:cancel",
+            "English":  "Cancel",
+            "Français": "Annuler",
+            "Deutsch":  "Abbrechen"
+        },
+        {
+            "KEY":      "gen:create",
+            "English":  "Create",
+            "Français": "Créer",
+            "Deutsch":  "Erstellen"
+        },
+        {
+            "KEY":      "gen:download",
+            "English":  "Download",
+            "Français": "Télécharger",
+            "Deutsch":  "Herunterladen"
+        },
+        {
+            "KEY":      "gen:browse",
+            "English":  "Browse",
+            "Français": "Parcourir",
+            "Deutsch":  "Durchsuchen"
+        },
+        {
+            "KEY":      "gen:load",
+            "English":  "Load",
+            "Français": "Charger",
+            "Deutsch":  "Laden"
+        },
+        {
+            "KEY":      "gen:save",
+            "English":  "Save",
+            "Français": "Sauvegarder",
+            "Deutsch":  "Speichern"
+        },
+        {
+            "KEY":      "gen:duplicate",
+            "English":  "Duplicate",
+            "Français": "Dupliquer",
+            "Deutsch":  "Duplizieren"
+        },
+        {
+            "KEY":      "gen:edit",
+            "English":  "Edit",
+            "Français": "Modifier",
+            "Deutsch":  "Editieren"
+        },
+        {
+            "KEY":      "gen:delete",
+            "English":  "Delete",
+            "Français": "Supprimer",
+            "Deutsch":  "Löschen"
+        },
+        {
+            "KEY":      "gen:yes",
+            "English":  "Yes",
+            "Français": "Oui",
+            "Deutsch":  "Ja"
+        },
+        {
+            "KEY":      "gen:no",
+            "English":  "No",
+            "Français": "Non",
+            "Deutsch":  "Nein"
+        },
+        {
+            "KEY":      "gen:name:label",
+            "English":  "Name",
+            "Français": "Nom",
+            "Deutsch":  "Name"
+        },
+        {
+            "KEY":      "gen:scenario:label",
+            "English":  "Scenario",
+            "Français": "Scénario",
+            "Deutsch":  "Szenario"
+        },
+        {
+            "KEY":      "gen:year:label",
+            "English":  "Year",
+            "Français": "Année",
+            "Deutsch":  "Jahr"
+        },
+        {
+            "KEY":      "gen:data:label",
+            "English":  "Data",
+            "Français": "Données",
+            "Deutsch":  "Daten"
+        },
+        {
+            "KEY":      "gen:crop:label",
+            "English":  "Crop",
+            "Français": "Culture",
+            "Deutsch":  "Kultur"
+        },
+        {
+            "KEY":      "gen:period:label",
+            "English":  "Planting Date",
+            "Français": "Date Plantation",
+            "Deutsch":  "Pflanzdatum"
+        },
+        {
+            "KEY":      "gen:months:label",
+            "English":  "months",
+            "Français": "mois",
+            "Deutsch":  "Monate"
+        },
+        {
+            "KEY":      "gen:period:label:rnf",
+            "English":  "Optimum (rainfed)",
+            "Français": "Optimum (pluvial)",
+            "Deutsch":  "Optimum (pluvial)"
+        },
+        {
+            "KEY":      "rainfed",
+            "English":  "Optimum (rainfed)",
+            "Français": "Optimum (pluvial)",
+            "Deutsch":  "Optimum (pluvial)"
+        },
+        {
+            "KEY":      "gen:period:label:irr",
+            "English":  "Optimum (irrigated)",
+            "Français": "Optimum (irriguée)",
+            "Deutsch":  "Optimum (bewässert)"
+        },
+        {
+            "KEY":      "irrigated",
+            "English":  "Optimum (irrigated)",
+            "Français": "Optimum (irriguée)",
+            "Deutsch":  "Optimum (bewässert)"
+        },
+        {
+            "KEY":      "gen:index:label:prec",
+            "English":  "Precipitation",
+            "Français": "Précipitations",
+            "Deutsch":  "Niederschlag"
+        },
+        {
+            "KEY":      "pre",
+            "English":  "Precipitation",
+            "Français": "Précipitations",
+            "Deutsch":  "Niederschlag"
+        },
+        {
+            "KEY":      "prec",
+            "English":  "Precipitation",
+            "Français": "Précipitations",
+            "Deutsch":  "Niederschlag"
+        },
+        {
+            "KEY":      "gen:index:label:temp",
+            "English":  "Temperature",
+            "Français": "Température",
+            "Deutsch":  "Temperatur"
+        },
+        {
+            "KEY":      "tas",
+            "English":  "Temperature",
+            "Français": "Température",
+            "Deutsch":  "Temperatur"
+        },
+        {
+            "KEY":      "temp",
+            "English":  "Temperature",
+            "Français": "Température",
+            "Deutsch":  "Temperatur"
+        },
+        {
+            "KEY":      "gen:fig:spinner",
+            "English":  "Recalculating ...",
+            "Français": "Recalculer ...",
+            "Deutsch":  "Neu berechnen ..."
+        },
+        {
+            "KEY":      "cru4",
+            "English":  "Observed (CRU TS4)",
+            "Français": "Observé (CRU TS4)",
+            "Deutsch":  "Beobachtet (CRU TS4)"
+        },
+        {
+            "KEY":      "cmip6_ssp126",
+            "English":  "+1.8ºC (CMIP6 ssp126)",
+            "Français": "+1,8ºC (CMIP6 ssp126)",
+            "Deutsch":  "+1.8ºC (CMIP6 ssp126)"
+        },
+        {
+            "KEY":      "cmip6_ssp245",
+            "English":  "+2.7ºC (CMIP6 ssp245)",
+            "Français": "+2,7ºC (CMIP6 ssp245)",
+            "Deutsch":  "+2.7ºC (CMIP6 ssp245)"
+        },
+        {
+            "KEY":      "cmip6_ssp370",
+            "English":  "+3.6ºC (CMIP6 ssp370)",
+            "Français": "+3,6ºC (CMIP6 ssp370)",
+            "Deutsch":  "+3.6ºC (CMIP6 ssp370)"
+        },
+        {
+            "KEY":      "cmip6_ssp585",
+            "English":  "+4.4ºC (CMIP6 ssp585)",
+            "Français": "+4,4ºC (CMIP6 ssp585)",
+            "Deutsch":  "+4.4ºC (CMIP6 ssp585)"
+        },
+        {
+            "KEY":      "Jan",
+            "English":  "Jan",
+            "Français": "Jan",
+            "Deutsch":  "Jan"
+        },
+        {
+            "KEY":      "Feb",
+            "English":  "Feb",
+            "Français": "Fév",
+            "Deutsch":  "Feb"
+        },
+        {
+            "KEY":      "Mar",
+            "English":  "Mar",
+            "Français": "Mar",
+            "Deutsch":  "Mär"
+        },
+        {
+            "KEY":      "Apr",
+            "English":  "Apr",
+            "Français": "Avr",
+            "Deutsch":  "Apr"
+        },
+        {
+            "KEY":      "May",
+            "English":  "May",
+            "Français": "Mai",
+            "Deutsch":  "Mai"
+        },
+        {
+            "KEY":      "Jun",
+            "English":  "Jun",
+            "Français": "Jun",
+            "Deutsch":  "Jun"
+        },
+        {
+            "KEY":      "Jul",
+            "English":  "Jul",
+            "Français": "Jul",
+            "Deutsch":  "Jul"
+        },
+        {
+            "KEY":      "Aug",
+            "English":  "Aug",
+            "Français": "Aoû",
+            "Deutsch":  "Aug"
+        },
+        {
+            "KEY":      "Sep",
+            "English":  "Sep",
+            "Français": "Sep",
+            "Deutsch":  "Sep"
+        },
+        {
+            "KEY":      "Oct",
+            "English":  "Oct",
+            "Français": "Oct",
+            "Deutsch":  "Okt"
+        },
+        {
+            "KEY":      "Nov",
+            "English":  "Nov",
+            "Français": "Nov",
+            "Deutsch":  "Nov"
+        },
+        {
+            "KEY":      "Dec",
+            "English":  "Dec",
+            "Français": "Déc",
+            "Deutsch":  "Dez"
+        },
+        {
+            "KEY":      "loc:current",
+            "English":  "Current location:",
+            "Français": "Position actuelle:",
+            "Deutsch":  "Aktueller Standort:"
+        },
+        {
+            "KEY":      "loc:new:button",
+            "English":  "create new ...",
+            "Français": "créer ...",
+            "Deutsch":  "neu kreieren ..."
+        },
+        {
+            "KEY":      "loc:new:title",
+            "English":  "Create a new location:",
+            "Français": "Créer une nouvelle position:",
+            "Deutsch":  "Neuen Standort erstellen:"
+        },
+        {
+            "KEY":      "loc:new:name",
+            "English":  "Location",
+            "Français": "Position",
+            "Deutsch":  "Standort"
+        },
+        {
+            "KEY":      "loc:new:warning-1",
+            "English":  "Latitude (Lat) und Longitude (Lon) in decimal format: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Be aware:</b> Extracting and downloading data from the KNMI server takes up to 15 minutes. Historical data is only available for land areas.",
+            "Français": "Latitude (Lat) et longitude (Lon) au format décimal: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Attention:</b> L'extraction et le téléchargement des données du serveur KNMI peuvent prendre jusqu'à 15 minutes. Les données historiques ne sont disponibles que pour les surfaces terrestres.",
+            "Deutsch":  "Breitengrad (Lat) und Längengrad (Lon) im Dezimalformat: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Achtung:</b> Das Extrahieren und Herunterladen von Daten vom KNMI-Server kann bis zu 15 Minuten dauern. Historische Daten sind nur für Landflächen verfügbar."
+        },
+        {
+            "KEY":      "loc:new:spinner",
+            "English":  "Creating new location",
+            "Français": "Créer nouvelle position",
+            "Deutsch":  "Erstellen des neuen Standorts"
+        },
+        {
+            "KEY":      "loc:new:warning-2",
+            "English":  "Please be patient. Extraction and download of data from the KNMI server takes up to 15 minutes. <br> If the connection is lost, try again with the same coordinates.",
+            "Français": "Veuillez patienter. L'extraction et le téléchargement des données du serveur KNMI peuvent prendre jusqu'à 15 minutes. <br> Si la connexion est interrompue, réessayez avec les mêmes coordonnées.",
+            "Deutsch":  "Bitte haben Sie etwas Geduld. Das Extrahieren und Herunterladen von Daten vom KNMI-Server kann bis zu 15 Minuten dauern. <br> Falls die Verbindung abbricht versuchen Sie es erneut mit denselben Koordinaten."
+        },
+        {
+            "KEY":      "loc:new:save:title",
+            "English":  "Save the location data on your computer as:",
+            "Français": "Enregistrer les données de la position sur votre ordinateur:",
+            "Deutsch":  "Standortdaten auf Ihrem Computer speichern:"
+        },
+        {
+            "KEY":      "loc:new:save:message",
+            "English":  "A saved location can be loaded much faster than if you extract it again from the KNMI server. Download the location to your computer if you want to analyse it again at a later time.",
+            "Français": "Une position enregistrée peut être chargée beaucoup plus rapidement que si vous l'extrayez de nouveau du serveur KNMI. Téléchargez la position sur votre ordinateur si vous souhaitez l'analyser à nouveau ultérieurement.",
+            "Deutsch":  "Ein gespeicherter Standort kann viel schneller geladen werden, als wenn Sie ihn erneut vom KNMI-Server extrahieren. Laden Sie den Standort auf Ihren Computer herunter, wenn Sie ihn zu einem späteren Zeitpunkt erneut analysieren möchten."
+        },
+        {
+            "KEY":      "loc:new:download:spinner-1",
+            "English":  "Compressing and downloading",
+            "Français": "Compression et téléchargement de",
+            "Deutsch":  "Komprimieren und Herunterladen von"
+        },
+        {
+            "KEY":      "loc:new:download:spinner-2",
+            "English":  "to your computer ...",
+            "Français": "sur votre ordinateur ...",
+            "Deutsch":  "auf Ihren Computer ..."
+        },
+        {
+            "KEY":      "loc:load:button",
+            "English":  "load from file ...",
+            "Français": "charger du fichier ...",
+            "Deutsch":  "Datei laden ..."
+        },
+        {
+            "KEY":      "loc:load:title",
+            "English":  "Load a previously saved location:",
+            "Français": "Charger une position précédemment enregistré:",
+            "Deutsch":  "Zuvor gespeicherten Standort laden:"
+        },
+        {
+            "KEY":      "loc:load:file",
+            "English":  "Location File (.zip)",
+            "Français": "Fichier de position (.zip)",
+            "Deutsch":  "Standort-Datei (.zip)"
+        },
+        {
+            "KEY":      "loc:load:spinner",
+            "English":  "Loading",
+            "Français": "Chargement de",
+            "Deutsch":  "Laden von"
+        },
+        {
+            "KEY":      "tser:title",
+            "English":  "Time Series",
+            "Français": "Séries Chronologiques",
+            "Deutsch":  "Zeitreihen"
+        },
+        {
+            "KEY":      "tser:info",
+            "English":  "<b>Analysis of temperature and precipitation trends based on observed climate and climate model predictions for the future.</b> For each figure, you can choose separately which climate variable (temperature or precipitation) and period (e.g. <em>Jan</em> to <em>Dec</em> to evaluate annual values, <em>Apr</em> to <em>Apr</em> to evaluate April values) should be represented. Once you have selected the climate variables and the period, you can display the data for the specification you have chosen by clicking on <em>update</em>. The observed (past) climate is shown in black, the predicted data for four different climate scenarios are shown in the colours red (+1.8ºC (CMIP6 ssp126)), green (+2.7ºC (CMIP6 ssp245)), blue (+3.6ºC (CMIP6 ssp370)) and purple (+4.4ºC (CMIP6 ssp585)). For the forecasts, data from around 40 different climate models are evaluated, the thick lines show the median of all the models, the thin lines the variance of the individual models.",
+            "Français": "<b>Analyse de l\\'évolution des températures et des précipitations mensuelles sur la base des données climatiques observées et des prévisions des modèles climatiques.</b> Pour chaque figure, vous pouvez choisir séparément la variable climatique (température ou précipitations) et la période (par ex. <em>Jan</em> à <em>Dec</em> pour évaluer les valeurs annuelles, <em>Avr</em> à <em>Avr</em> pour évaluer les valeurs du mois d\\'avril) à représenter. Après avoir sélectionné les variables climatiques et la période, vous pouvez afficher les données pour la spécification que vous avez choisie en cliquant sur <em>actualiser</em>. Le climat observé (passé) est représenté en noir, les données prévues pour quatre scénarios climatiques différents sont représentées dans les couleurs rouge (+1.8ºC (CMIP6 ssp126)), vert (+2.7ºC (CMIP6 ssp245)), bleu (+3.6ºC (CMIP6 ssp370)) et violet (+4.4ºC (CMIP6 ssp585)). Pour les prévisions, les données d\\'environ 40 modèles climatiques différents sont évaluées, les lignes épaisses montrent la médiane de tous les modèles, les lignes fines la variance des modèles individuelles.",
+            "Deutsch":  "<b>Analyse der Temperatur- und Niederschlagsentwicklung auf Basis von Klimamessdaten und Klimamodellvorhersagen.</b> Für jede Abbildung kann separat ausgewählt werden, welche Klimavariable (Temperatur oder Niederschlag) und welcher Zeitraum (z.B. <em>Jan</em> bis <em>Dez</em>, um Jahreswerte zu bewerten, <em>Apr</em> bis <em>Apr</em>, um Werte für den Monat April zu bewerten) dargestellt werden soll. Nach der Auswahl der Klimavariablen und des Zeitrahmens können Sie mit einem Klick auf <em>aktualisieren</em> die Daten für die von Ihnen gewählte Spezifikation darstellen. Das beobachtete (vergangene) Klima wird in schwarz dargestellt. Die vorhergesagten Daten für vier verschiedene Klimaszenarien werden in den Farben rot (+1.8ºC (CMIP6 ssp126)), grün (+2.7ºC (CMIP6 ssp245)), blau (+3.6ºC (CMIP6 ssp370)) und violett (+4.4ºC (CMIP6 ssp585)) dargestellt. Für die Vorhersagen werden die Daten von rund 40 verschiedenen Klimamodellen ausgewertet, die dicken Linien zeigen den Median aller Modelle, die dünnen Linien die Modellvarianz."
+        },
+        {
+            "KEY":      "tser:var:label",
+            "English":  "Climate Variable",
+            "Français": "Variable Climatique",
+            "Deutsch":  "Klimavariable"
+        },
+        {
+            "KEY":      "tser:start:label",
+            "English":  "From",
+            "Français": "De",
+            "Deutsch":  "Von"
+        },
+        {
+            "KEY":      "tser:end:label",
+            "English":  "To",
+            "Français": "À",
+            "Deutsch":  "Bis"
+        },
+        {
+            "KEY":      "tser:update",
+            "English":  "update",
+            "Français": "actualiser",
+            "Deutsch":  "aktualisieren"
+        },
+        {
+            "KEY":      "tser:period:info:title",
+            "English":  "Period to be analysed",
+            "Français": "Période à analyser",
+            "Deutsch":  "Zu analysierenden Periode"
+        },
+        {
+            "KEY":      "tser:period:info",
+            "English":  "<b>Examples for periods to be analyzed:</b><br>- Annual values [Jan:Dec]<br>- Seasonal values e.g. [Jun:Aug] or [Nov:Feb]<br>- Monthly values e.g. [Jul:Jul]",
+            "Français": "<b>Exemples de periodes à analyser:</b><br>- Valeurs annuelles [Jan:Déc]<br>- Valeurs saisonnières, par exemple [Jun:Aoû] ou [Nov:Fév]<br>- Valeurs mensuelles, par exemple [Jul:Jul]",
+            "Deutsch":  "<b>Beispiele für zu analysierende Perioden:</b><br>- Jahreswerte [Jan:Dez]<br>- Saisonale Werte z.B. [Jun:Aug] oder [Nov:Feb]<br>- Monatliche Werte z.B. [Jul:Jul]"
+        },
+        {
+            "KEY":      "tser:fig:temp:title",
+            "English":  "Temperature Time Series",
+            "Français": "Série Temporelle de Température",
+            "Deutsch":  "Temperatur-Zeitreihe"
+        },
+        {
+            "KEY":      "tser:fig:temp:ylab",
+            "English":  "Mean Temperature (ºC)",
+            "Français": "Température moyenne (ºC)",
+            "Deutsch":  "Mittlere Temperatur (ºC)"
+        },
+        {
+            "KEY":      "tser:fig:prec:title",
+            "English":  "Precipitation Time Series",
+            "Français": "Série Temporelle de Précipitations",
+            "Deutsch":  "Niederschlags-Zeitreihe"
+        },
+        {
+            "KEY":      "tser:fig:prec:ylab",
+            "English":  "Mean precipitation (mm/day)",
+            "Français": "Précipitation moyenne (mm/jour)",
+            "Deutsch":  "Mittlerer Niederschlag (mm/Tag)"
+        },
+        {
+            "KEY":      "clim:title",
+            "English":  "Climographs",
+            "Français": "Climatogrammes",
+            "Deutsch":  "Klimadiagramme"
+        },
+        {
+            "KEY":      "clim:info",
+            "English":  "<b>Analysis of the development of the annual course of temperature and precipitation, based on observed climate and climate model predictions.</b> For each figure, you can specify separately which climate variable (temperature or precipitation) and which climate scenario (observed data or future scenarios: +1.8ºC (CMIP6 ssp126), +2.7ºC (CMIP6 ssp245), +3.6ºC (CMIP6 ssp370), +4.4ºC (CMIP6 ssp585)) should be displayed. When switching to a future scenario, the observed data is shown in grey to give an indication of the future trend. The projections reflect the median of all climate models considered (~ 40 models) and therefore only show the trends, but not the annual variability of individual models.",
+            "Français": "<b>Analyse de l\\'évolution de la température et des précipitations au cours de l\\'année, sur la base du climat observé et des prévisions des modèles climatiques.</b> Il est possible de définir séparément pour chaque figure la variable climatique (température ou précipitations) et le scénario climatique (données observées ou scénarios futurs : +1.8ºC (CMIP6 ssp126), +2.7ºC (CMIP6 ssp245), +3.6ºC (CMIP6 ssp370), +4.4ºC (CMIP6 ssp585)) à représenter. Lorsque on passe à un scénario futur, les données observées sont grisées afin de donner une indication de la tendance future. Les projections reflètent la médiane de tous les modèles climatiques considérés (~ 40 modèles) et ne montrent donc que les tendances, et non la variabilité annuelle des différents modèles.",
+            "Deutsch":  "<b>Analyse der Entwicklung des Jahresverlaufs von Temperatur und Niederschlag, auf Basis von Klimamessdate und Klimamodellvorhersagen.</b> Es kann für jede Figur separat festgelegt werden welche Klimavariable (Temperatur oder Niederschlag) und welches Klimaszenario (beobachtete Daten oder Zukunftsszenarien: +1.8ºC (CMIP6 ssp126), +2.7ºC (CMIP6 ssp245), +3.6ºC (CMIP6 ssp370), +4.4ºC (CMIP6 ssp585)) dargestellt werden soll. Beim Wechsel zu einem Zukunftsszenario werden die beobachteten Daten in grau dargestellt, um einen Hinweis auf den zukünftigen Trend zu geben. Die Projektionen geben den Median aller betrachteten Klimamodelle (~ 40 Modelle) wieder und zeigen daher nur die Trends, nicht aber die jährliche Variabilität einzelner Modelle."
+        },
+        {
+            "KEY":      "clim:var:label",
+            "English":  "Climate Variable",
+            "Français": "Variable Climatique",
+            "Deutsch":  "Klimavariable"
+        },
+        {
+            "KEY":      "clim:fig:temp:title",
+            "English":  "Temperature seasonality",
+            "Français": "Saisonnalité des températures",
+            "Deutsch":  "Temperatur-Saisonalität"
+        },
+        {
+            "KEY":      "clim:fig:temp:ylab",
+            "English":  "Monthly mean temperature (ºC)",
+            "Français": "Température moyenne mensuelle (ºC)",
+            "Deutsch":  "Monats-Mitteltemperatur (ºC)"
+        },
+        {
+            "KEY":      "clim:fig:prec:title",
+            "English":  "Precipitation seasonality",
+            "Français": "Saisonnalité des précipitations",
+            "Deutsch":  "Niederschlags-Saisonalität"
+        },
+        {
+            "KEY":      "clim:fig:observed",
+            "English":  "Precipitation seasonality",
+            "Français": "Saisonnalité des précipitations",
+            "Deutsch":  "Niederschlags-Saisonalität"
+        },
+        {
+            "KEY":      "clim:fig:prec:ylab",
+            "English":  "Monthly mean precipitation (mm/day)",
+            "Français": "Précipitation moyenne mensuelle (mm/jour)",
+            "Deutsch":  "Monatlicher Durchschnittsniederschlag (mm/Tag)"
+        },
+        {
+            "KEY":      "diag:title",
+            "English":  "Walter-Lieth",
+            "Français": "Walter-Lieth",
+            "Deutsch":  "Walter-Lieth"
+        },
+        {
+            "KEY":      "diag:info",
+            "English":  "<b>Climate diagrams according to Walter & Lieth for observed data during historical norm periods and model projections (model median) for future periods.</b> The red curve shows the monthly mean temperatures over the respective period, the blue curve the mean monthly precipitation. Yellow area indicate seasons in which arid conditions prevail, blue area those with humid conditions.",
+            "Français": "<b>Diagrammes climatiques selon Walter & Lieth pour les données observées pendant les périodes historiques normales et les projections des modèles (médiane des modèles) pour les périodes futures.</b> La courbe rouge indique les températures moyennes mensuelles sur la période concernée, la courbe bleue les précipitations moyennes mensuelles. Les zones jaunes indiquent les saisons où les conditions arides prévalent, les zones bleues celles où les conditions sont humides.",
+            "Deutsch":  "<b>Klimadiagramme nach Walter & Lieth für Beobachtungsdaten während historischer Normperioden und Modellprojektionen (Modellmedian) für zukünftige Perioden.</b> Die rote Kurve zeigt die monatlichen Mitteltemperaturen über den jeweiligen Zeitraum, die blaue Kurve den mittleren Monatsniederschlag. Gelbe Flächen zeigen Jahreszeiten an, in denen trockene Bedingungen vorherrschen, blaue Flächen solche mit feuchten Bedingungen."
+        },
+        {
+            "KEY":      "diag:set_sce-1:label",
+            "English":  "Historical Data",
+            "Français": "Données historiques",
+            "Deutsch":  "Historische Daten"
+        },
+        {
+            "KEY":      "diag:set_sce-2:label",
+            "English":  "Climate Change Scenario",
+            "Français": "Scénario de changement climatique",
+            "Deutsch":  "Klimawandel-Szenario"
+        },
+        {
+            "KEY":      "diag:period:label",
+            "English":  "Period",
+            "Français": "Periode",
+            "Deutsch":  "Periode"
+        },
+        {
+            "KEY":      "crops:title",
+            "English":  "Crop Specification",
+            "Français": "Spécification Cultures",
+            "Deutsch":  "Spezifikation Kulturpflanzen"
+        },
+        {
+            "KEY":      "crops:info",
+            "English":  "<b>Define the climatic requirements of the crops to be analysed.</b> To analyse the suitability of crops under future climatic conditions, it is necessary to define their basic climatic requirements. If you want to choose from a wide range of predefined crops from the FAO EcoCrop database, click <em>New ...</em> in the <em>Crops:</em> list on the left-hand side and then select <em>Load ...</em>. You can then search for your crop in a pop-up window and load the values directly into the tool (don\\'t forget to save the crop after you have loaded it from the database). Alternatively, you can manually set the minimum and maximum duration of the growing period (days from sowing to harvest), the optimum range and limits of monthly average temperatures during the growing period, as well as the optimum range and limits for annual rainfall. The list of crops defined in this way can be saved on your computer and reloaded at a later date.",
+            "Français": "<b>Définition des exigences climatiques des plantes à analyser.</b> Afin d\\'analyser l\\'aptitude des plantes dans des conditions climatiques futures, il est nécessaire de définir leurs exigences climatiques de base. Si vous souhaitez choisir parmi un large éventail de cultures prédéfinies dans la base de données FAO EcoCrop, cliquez sur <em>Nouveau ...</em> dans la liste <em>Cultures:</em> sur la gauche, puis sélectionnez <em>Charger ...</em>. Vous pouvez alors rechercher votre culture dans une fenêtre pop-up et charger les valeurs directement dans l\\'outil (n\\'oubliez pas d\\'enregistrer la culture après l\\'avoir chargée depuis la base de données). Vous pouvez également définir manuellement la durée minimale et maximale de la période de croissance (jours entre le semis et la récolte), la plage optimale et les valeurs limites des températures moyennes mensuelles pendant la période de croissance, ainsi que la plage optimale et les valeurs limites des précipitations annuelles. La liste des cultures ainsi définies peut être enregistrée sur votre ordinateur et rechargée ultérieurement.",
+            "Deutsch":  "<b>Definition der klimatischen Anforderungen der zu analysierenden Pflanzen.</b> Um die Eignung von Pflanzen unter zukünftigen Klimabedingungen zu analysieren, ist es notwendig, ihre grundlegenden klimatischen Anforderungen zu definieren. Wenn Sie aus einer breiten Palette von vordefinierten Kulturen aus der FAO EcoCrop-Datenbank auswählen möchten, klicken Sie auf <em>Neu ...</em> in der Liste <em>Kulturen:</em> auf der linken Seite und wählen Sie dann <em>Laden ...</em>. Sie können dann in einem Pop-up-Fenster nach Ihrer Kultur suchen und die Werte direkt in das Tool laden (vergessen Sie nicht, die Kultur zu speichern, nachdem Sie sie aus der Datenbank geladen haben). Alternativ können Sie die minimale und maximale Dauer der Wachstumsperiode (Tage von der Aussaat bis zur Ernte), den optimalen Bereich und die Grenzwerte der monatlichen Durchschnittstemperaturen während der Wachstumsperiode sowie den optimalen Bereich und die Grenzwerte für die jährlichen Niederschläge manuell einstellen. Die Liste der so definierten Kulturen kann auf Ihrem Computer gespeichert und zu einem späteren Zeitpunkt wieder geladen werden."
+        },
+        {
+            "KEY":      "crops:list:label",
+            "English":  "Crops:",
+            "Français": "Cultures:",
+            "Deutsch":  "Kulturen:"
+        },
+        {
+            "KEY":      "crops:new",
+            "English":  "New",
+            "Français": "Nouvelle",
+            "Deutsch":  "Neu"
+        },
+        {
+            "KEY":      "crops:gdur:label",
+            "English":  "Growing period",
+            "Français": "Période de croissance",
+            "Deutsch":  "Wachstumsperiode"
+        },
+        {
+            "KEY":      "crops:gdur:info:title",
+            "English":  "Specification of the growing period",
+            "Français": "Spécification de la période de croissance",
+            "Deutsch":  "Spezifikation der Wachstumsperiode"
+        },
+        {
+            "KEY":      "crops:gdur:info",
+            "English":  "All analyses are based on the mean value between the minimum and maximum duration of the growth period, rounded to the number of months (given in [x months]).",
+            "Français": "Toutes les analyses sont basées sur la moyenne entre la durée minimale et la durée maximale de la période de croissance, arrondie au nombre de mois (indiqué en [x mois]).",
+            "Deutsch":  "Sämtliche Analysen basieren auf dem Mittelwert zwischen minimaler und maximaler Dauer der Wachstumsperiode, gerundet auf Anzahl Monate (in [x Monate] angegeben)."
+        },
+        {
+            "KEY":      "crops:topt:label",
+            "English":  "Temperature optimum",
+            "Français": "Température optimale",
+            "Deutsch":  "Temperatur-Optimum"
+        },
+        {
+            "KEY":      "crops:tlim:label",
+            "English":  "Temperature limits",
+            "Français": "Limites de température",
+            "Deutsch":  "Temperaturgrenzen"
+        },
+        {
+            "KEY":      "crops:popt:label",
+            "English":  "Precipitation optimum",
+            "Français": "Précipitations optimales",
+            "Deutsch":  "Niederschlags-Optimum"
+        },
+        {
+            "KEY":      "crops:plim:label",
+            "English":  "Precipitation limits",
+            "Français": "Limites de précipitations",
+            "Deutsch":  "Niederschlagsgrenzen"
+        },
+        {
+            "KEY":      "crops:fig:title",
+            "English":  "Climatic niche of",
+            "Français": "Niche climatique de",
+            "Deutsch":  "Klimatische Nische von"
+        },
+        {
+            "KEY":      "crops:fig:ylab",
+            "English":  "Temperature (ºC)",
+            "Français": "Température (ºC)",
+            "Deutsch":  "Temperatur (ºC)"
+        },
+        {
+            "KEY":      "crops:fig:xlab",
+            "English":  "Annual precipitation (mm)",
+            "Français": "Précipitations annuelles (mm)",
+            "Deutsch":  "Jahresniederschlag (mm)"
+        },
+        {
+            "KEY":      "crops:fig:legend",
+            "English":  "Suitability",
+            "Français": "Aptitude",
+            "Deutsch":  "Eignung"
+        },
+        {
+            "KEY":      "ecind:title",
+            "English":  "EcoCrop Index",
+            "Français": "Indice EcoCrop",
+            "Deutsch":  "EcoCrop Index"
+        },
+        {
+            "KEY":      "ecind:info",
+            "English":  "<b>Analysis of the climate suitability of specific crops based on the FAO EcoCrop model.</b> The climate suitability index provides information on how well a specific crop is suited to past, current and future climate conditions. The index ranges from 0 to 1, where 0 means that the crop is not suitable at all and 1 means that the conditions for the crop are optimal. You can select a planting date from the list of your crops that you have defined under <em>Crop Specification</em> and specify whether you want to see the individual indices for temperature or precipitation or a combined index. <em>Temperature index:</em> Temperature suitability (values 0-1) during the growing season. <em>Precipitation index:</em> Precipitation suitability during the growing season (the calculation includes one preceding and one following month). <em>Combined index</em> Minimum of temperature and precipitation index during the growing season. For the planting date, you can select a specific month or select the best growing period, either with the <em>Optimum (rainfed)</em> option, where the period with the highest combined index is selected; or with the <em>Optimum (irrigated)</em> option, where the period with the best temperature index is selected and the precipitation data is ignored.",
+            "Français": "<b>Analyse de l\\'adéquation climatique de cultures spécifiques basée sur le modèle EcoCrop de la FAO.</b> L\\'indice d\\'adéquation climatique fournit des informations sur la manière dont une culture spécifique est adaptée aux conditions climatiques passées, actuelles et futures. L\\'indice varie de 0 à 1, où 0 signifie que la culture n\\'est pas du tout adaptée et 1 signifie que les conditions pour la culture sont optimales. Vous pouvez sélectionner une date de plantation pour la liste de vos cultures que vous avez définie sous <em>Spécification Cultures</em> et spécifier si vous voulez voir les indices individuels de température ou de précipitations ou un indice combiné. <em>Indice de température:</em> Adéquation de la température (valeurs 0-1) pendant la saison de croissance. <em>Indice de précipitation:</em> Adéquation des précipitations pendant la période de végétation (le calcul comprend un mois précédent et un mois suivant). <em>Indice combiné</em> Minimum de l\\'indice de température et de l\\'indice de précipitation pendant la période de végétation. Pour la date de plantation, vous pouvez sélectionner un mois spécifique ou la meilleure période de croissance, soit avec l\\'option <em>Optimum (pluvial)</em>, où la période avec l\\'indice combiné le plus élevé est sélectionnée; soit avec l\\'option <em>Optimum (irrigué)</em>, où la période avec le meilleur indice de température est sélectionnée et les données de précipitations sont ignorées.",
+            "Deutsch":  "<b>Analyse der Klimaeignung bestimmter Kulturen auf der Grundlage des FAO EcoCrop Modells.</b> Der Klimaeignungsindex gibt Aufschluss darüber, wie gut eine bestimmte Kulturpflanze für vergangene, aktuelle und zukünftige Klimabedingungen geeignet ist. Der Index reicht von 0 bis 1, wobei 0 bedeutet, dass die Kultur überhaupt nicht geeignet ist, und 1, dass die Bedingungen für die Kultur optimal sind. Sie können aus der Liste Ihrer Kulturen, die Sie unter <em>Spezifikation Kulturpflanzen</em> definiert haben, ein Pflanzdatum auswählen und festlegen, ob Sie den einzelnen Index für Temperatur oder Niederschlag oder einen kombinierten Index sehen möchten. <em>Temperaturindex:</em> Temperatureignung (Werte 0-1) während der Vegetationsperiode. <em>Niederschlagsindex:</em> Niederschlagseignung während der Vegetationsperiode (die Berechnung umfasst einen vorhergehenden und einen nachfolgenden Monat). <em> Kombinierter Index</em> Minimum von Temperatur- und Niederschlagsindex während der Vegetationsperiode. Für das Pflanzdatum können Sie einen bestimmten Monat auswählen, oder jeweils die beste Anbauperiode wählen, entweder mit der Option <em>Optimum (pluvial)</em>, bei der jeweils der Zeitraum mit dem höchsten kombinierten Index ausgewählt wird; oder mit der Option <em>Optimum (bewässert)</em>, bei welcher der Zeitraum mit dem besten Temperaturindex ausgewählt wird und die Niederschlagsdaten ignoriert werden."
+        },
+        {
+            "KEY":      "ecind:index:label",
+            "English":  "Index",
+            "Français": "Indice",
+            "Deutsch":  "Index"
+        },
+        {
+            "KEY":      "ecind:index:label:comb",
+            "English":  "Combined",
+            "Français": "Combiné",
+            "Deutsch":  "Kombiniert"
+        },
+        {
+            "KEY":      "comb",
+            "English":  "Combined",
+            "Français": "Combiné",
+            "Deutsch":  "Kombiniert"
+        },
+        {
+            "KEY":      "ecind:fig:comb:ylab",
+            "English":  "Climate suitability",
+            "Français": "Aptitude au climat",
+            "Deutsch":  "Klimaeignung"
+        },
+        {
+            "KEY":      "ecind:fig:temp:ylab",
+            "English":  "Temperature suitability",
+            "Français": "Aptitude à la température",
+            "Deutsch":  "Temperatureignung"
+        },
+        {
+            "KEY":      "ecind:fig:prec:ylab",
+            "English":  "Precipitation suitability",
+            "Français": "Aptitude aux précipitations",
+            "Deutsch":  "Niederschlagseignung"
+        },
+        {
+            "KEY":      "pdate:title",
+            "English":  "Planting Date",
+            "Français": "Date de Plantation",
+            "Deutsch":  "Pflanzdatum"
+        },
+        {
+            "KEY":      "pdate:info",
+            "English":  "<b>Shift of the optimal planting date</b> as derived from the application of the EcoCrop model, i.e. the start month of the cultivation period with the highest combined temperature and precipitation index for rainfed cultivation or the maximum temperature index for cultivation with irrigation. For the list of your crops that you have defined under <em>Crop specification</em>, you can select how the planting date should be optimised (for rainfed or irrigated cultivation) and choose from the four different climate scenarios. The figure shows the ideal planting months over a period of 30 years with circles. The larger the circle, the greater the number of years in the respective period in which the corresponding month is the ideal month for cultivation. For future periods (in colour), the size of the circles corresponds to the number of models (of the ~40 climate models) that suggest the corresponding planting month. A larger circle therefore means that the month is more optimal on average for the 30-year period than a smaller circle. The line shows the shift over time and corresponds to the average of all data.",
+            "Français": "<b>Décalage de la date de plantation optimale</b> telle qu\\'elle résulte de l\\'application du modèle EcoCrop, c\\'est-à-dire le mois de début de la période de culture avec l\\'indice combiné de température et de précipitations le plus élevé pour la culture pluviale ou l\\'indice de température maximal pour la culture irriguée. Pour la liste de vos cultures que vous avez définie sous <em>Spécification des cultures</em>, vous pouvez choisir comment la date de plantation doit être optimisée (pour la culture pluviale ou la culture irriguée) et choisir parmi les quatre différents scénarios climatiques. Dans l\\'illustration, les mois de culture idéaux sont représentés par des cercles sur des périodes de 30 ans. Plus un cercle est grand, plus le nombre d\\'années de la période concernée pendant lesquelles le mois correspondant est le mois de culture idéal est élevé. Pour les périodes futures (en couleur), la taille des cercles correspond au nombre de modèles (parmi les ~40 modèles climatiques) avec le mois de culture correspondant. Un cercle plus grand signifie donc que le mois est en moyenne plus optimal pour la période de 30 ans qu\\'un cercle plus petit. La ligne montre le décalage dans le temps et correspond à la moyenne de toutes les données.",
+            "Deutsch":  "<b>Verschiebung des optimalen Pflanzdatums</b>, wie es sich aus der Anwendung des EcoCrop-Modells ergibt, d.h. der Startmonat der Anbauperiode mit dem höchsten kombinierten Temperatur- und Niederschlagsindex für den Regenfeldbau bzw. den maximalen Temperaturindex für den Anbau mit Bewässerung. Sie können für die Liste Ihrer Kulturen, die Sie unter <em>Spezifikation Kulturpflanzen</em> definiert haben, auswählen, wie das Pflanzdatum optimiert werden soll (für Regenfeldbau oder Bewässerungsanbau) und aus den vier verschiedenen Klimaszenarien wählen. In der Abbildung sind die idealen Anbaumonate über Zeiträume von 30 Jahren mit Kreisen dargestellt. Je größer ein Kreis ist, desto größer ist die Anzahl der Jahre in der jeweiligen Periode, in denen der entsprechende Monat der optimale Anbaumonat ist. Für zukünftige Perioden (in Farbe) entspricht die Grösse der Kreise der Anzahl der Modelle (von den ~40 Klimamodellen) mit entsprechendem Anbaumonat. Ein grösserer Kreis bedeutet daher, dass der Monat im Durchschnitt für den 30-Jahres-Zeitraum optimaler ist als ein kleinerer Kreis. Die Linie zeigt die Verschiebung über die Zeit und entspricht dem Durchschnitt aller Daten."
+        },
+        {
+            "KEY":      "pdate:suit:label",
+            "English":  "Incl. Suitability?",
+            "Français": "Incl. Aptitude?",
+            "Deutsch":  "Inkl. Eignung?"
+        },
+        {
+            "KEY":      "pdate:suit:info:title",
+            "English":  "Show climate suitability in the figure",
+            "Français": "Montrer l\\'aptitude climatique dans la figure",
+            "Deutsch":  "Klimaeignung in der Abbildung zeigen"
+        },
+        {
+            "KEY":      "pdate:suit:info",
+            "English":  "Add the median of the climate suitability of the respective data points, e.g. the median of the April climate suitability of all model projections that envisage April as the most favourable planting date for the period 2081 - 2100. The size of the circles still corresponds to the number of observations/projections with the corresponding month as the best time for cultivation. The generalised linear model of the best planting date now also takes into account climate suitability as weights.",
+            "Français": "Ajouter la médiane de l\\'aptitude climatique des points de données respectifs, par exemple la médiane de l\\'aptitude climatique du mois d\\'avril de toutes les projections du modèle qui considèrent le mois d\\'avril comme la date de plantation la plus favorable pour la période 2081 - 2100. La taille des cercles correspond toujours au nombre d\\'observations/projections pour lesquelles le mois correspondant est la meilleure date de plantation. Le modèle linéaire généralisé de la meilleure date de plantation tient désormais également compte de l\\'aptitude climatique en tant que poids.",
+            "Deutsch":  "Hinzufügen des Medians der Klimaeignung der jeweiligen Datenpunkte, z.B. der Median der April-Klimaeignung sämtlicher Modellprojektionen, die für den Zeitraum 2081 - 2100 den April als günstigsten Anbaumonat vorsehen. Die Grösse der Kreise entspricht weiterhin der Anzahl Beobachtungen/Projektionen mit entsprechendem Monat als bestem Anbauzeitpunkt. Das generalisierte lineare Modell des besten Anbauzeitpunkts berücksichtigt nun zusätzlich die Klimaeignung als Gewichte."
+        },
+         {
+            "KEY":      "ccor:title",
+            "English":  "Climate Corridors",
+            "Français": "Corridors Climatiques",
+            "Deutsch":  "Klimakorridore"
+        },
+        {
+            "KEY":      "ccor:info",
+            "English":  "<b>The Climate Corridor approach developed by Caritas shows in an intuitive way how the temperature and precipitation development behaves in relation to the corresponding climatic requirements of crops (the Climate Corridors, indicating areas of optimal conditions and limits).</b> The corridors for temperature and precipitation show the optimal area (between dashed lines) and the limits of cultivation (solid lines). The better the climate data fits between these lines, the better the climatic conditions for the selected crop. You can select from the list of your crops defined under <em>Crop Specification</em>, select the planting date, the corridor you wish to show and select from the four different climate scenarios for the two plots independently.  The ideal cultivation dates for <em>Optimum (rainfed)</em> and <em>Optimum (irrigated)</em> result from the calculation of the EcoCrop indices. This means that, depending on the selection, different months of the year are optimal for planting (further information on planting date shifts can be found on the <em>Planting Date</em> tab) and the corridors may look different. In the temperature corridor, the mean temperature and the monthly mean temperatures of the warmest and coldest month during the growing season are displayed as additional information. The precipitation corridor compares the precipitation requirement (annual precipitation) with the precipitation sum during the growing period, including the precipitation of the previous month and the following month. The model projections show the median and the interval between the 10% and 90% percentiles.",
+            "Français": "<b>L\\'approche des Corridors Climatiques développée par Caritas montre de manière facilement compréhensible comment l\\'évolution des températures et des précipitations se comporte par rapport aux exigences climatiques correspondantes des plantes cultivées (les corridors climatiques, qui indiquent les zones de conditions optimales et les limites).</b> Les couloirs de température et de précipitations indiquent la zone optimale (entre les lignes pointillées) et les limites de la culture (lignes pleines). Plus les données climatiques s\\'inscrivent entre ces lignes, meilleures sont les conditions climatiques pour la culture sélectionnée. Vous pouvez choisir dans la liste de vos cultures définie sous <em>Spécification Cultures</em>, sélectionner la date de plantation, le couloir que vous souhaitez montrer et choisir parmi les quatre scénarios climatiques différents pour les deux parcelles indépendamment. Les dates de culture idéales pour <em>Optimum (pluvial)</em> et <em>Optimum (irrigué)</em> résultent du calcul des indices EcoCrop. Cela signifie que, selon la sélection, différents mois de l\\'année sont optimaux pour la plantation (de plus amples informations sur le décalage des dates de plantation sont disponibles dans l\\'onglet <em>Date de plantation</em>) et que les couloirs peuvent avoir un aspect différent. Dans le couloir des températures, la température moyenne et les températures moyennes mensuelles du mois le plus chaud et du mois le plus froid pendant la saison de croissance sont affichées à titre d\\'information supplémentaire. Le couloir des précipitations compare le besoin en précipitations (précipitations annuelles) avec la somme des précipitations pendant la période de croissance, y compris les précipitations du mois précédent et du mois suivant. Les projections du modèle indiquent la médiane et l\\'intervalle entre les percentiles 10 % et 90 %.",
+            "Deutsch":  "<b>Der von Caritas entwickelte Klimakorridor-Ansatz zeigt auf leicht verständliche Weise, wie sich die Temperatur- und Niederschlagsentwicklung in Bezug auf die entsprechenden klimatischen Anforderungen von Kulturpflanzen verhält (die Klimakorridore, mit Bereichen optimaler Bedingungen und Grenzen).</b> Die Korridore für Temperatur und Niederschlag zeigen das optimale Gebiet (zwischen gestrichelten Linien) und die Grenzen des Anbaus (durchgezogene Linien). Je besser die Klimadaten zwischen diese Linien passen, desto besser sind die klimatischen Bedingungen für die ausgewählte Kultur. Sie können aus der Liste Ihrer Kulturen, die Sie unter <em> Spezifikation Kulturpflanzen</em> definiert haben, das Anbaudatum und den Korridor, den Sie anzeigen möchten, auswählen und aus den vier verschiedenen Klimaszenarien für die beiden Parzellen unabhängig voneinander auswählen. Die idealen Anbautermine bei <em>Optimum (pluvial)</em> und <em>Optimum (bewässert)</em> ergeben sich aus der Berechnung der EcoCrop-Indizes. Das bedeutet, dass je nach Auswahl unterschiedliche Monate des Jahres für die Bepflanzung optimal sind (weitere Informationen zur Verschiebung der Pflanztermine finden Sie auf der Registerkarte <em>Pflanzdatum</em>) und die Korridore unterschiedlich aussehen können. Im Temperaturkorridor werden als zusätzliche Information die Mitteltemperatur und die Monatsmitteltemperaturen des wärmsten und kältesten Monats während der Vegetationsperiode angezeigt. Der Niederschlagskorridor vergleicht den Niederschlagsbedarf (Jahresniederschlag) mit der Niederschlagssumme während der Anbauperiode, einschliesslich des Niederschlags des Vormonats und des Folgemonats. Die Modellprojektionen zeigen den Median und das Intervall zwischen den 10%- und 90%-Perzentilen."
+        },
+        {
+            "KEY":      "ccor:index:label",
+            "English":  "Corridor",
+            "Français": "Corridor",
+            "Deutsch":  "Korridor"
+        },
+        {
+            "KEY":      "ccor:fig:temp:title",
+            "English":  "Temperature Corridor",
+            "Français": "Corridor de Température",
+            "Deutsch":  "Temperatur-Korridor"
+        },
+        {
+            "KEY":      "ccor:fig:prec:title",
+            "English":  "Precipitation Corridor",
+            "Français": "Corridor de Précipitations",
+            "Deutsch":  "Niederschlags-Korridor"
+        },
+        {
+            "KEY":      "ccor:fig:temp:ylab",
+            "English":  "Temperature during growing period (ºC)",
+            "Français": "Température pendant la période de croissance (ºC)",
+            "Deutsch":  "Temperatur während Wachstumsperiode (ºC)"
+        },
+        {
+            "KEY":      "ccor:fig:prec:ylab",
+            "English":  "Precipition during growing period ± 1 month (mm)",
+            "Français": "Précipitations pendant la période de croissance ± 1 mois (mm)",
+            "Deutsch":  "Niederschlag während Wachstumsperiode ± 1 Monat (ºC)"
+        },
+        {
+            "KEY":      "ccor:fig:temp:legend",
+            "English":  "Growing period",
+            "Français": "Période de croissance",
+            "Deutsch":  "Wachstumsperiode"
+        },
+        {
+          "KEY":        "foot:ecocrop:disclaimer",
+          "English":    "<b>Note:</b> The crop analyses provided (Ecocrop Index and Climate Corridors) provide a simple means of assessing the overall suitability of crops in a changing climate. However, it is important to bear in mind that other factors may be of equal or even greater importance for long-term crop suitability (e.g. soil properties, management practices, including fertiliser application, social acceptability, etc.). This analysis is best used as a starting point for participatory assessments and to engage the discussion on climate change impacts with local stakeholders.<br>",
+          "Français": "<b>Note:</b> Les analyses de cultures fournies (Indice Ecocrop et Corridors Climatiques) constituent un moyen simple d'évaluer l'adéquation globale des cultures à un climat changeant. Cependant, il est important de garder à l'esprit que d'autres facteurs peuvent être d'une importance égale ou même supérieure pour l'adéquation des cultures à long terme (par exemple, les propriétés du sol, les pratiques de gestion, y compris l'application d'engrais, l'acceptabilité sociale, etc.). Cette analyse est utilisée de préférence comme point de départ pour les évaluations participatives et pour engager la discussion sur les impacts du changement climatique avec les parties prenantes.",
+          "Deutsch":  "<b>Hinweis:</b> Die bereitgestellten Kulturpflanzen-Analysen (Ecocrop-Index und Klimakorridore) bieten ein einfaches Mittel zur Bewertung der allgemeinen Eignung von Kulturpflanzen in einem sich ändernden Klima. Es ist jedoch wichtig zu bedenken, dass andere Faktoren für die langfristige Anbaueignung von gleicher oder sogar grösserer Bedeutung sein können (z.B. Bodeneigenschaften, Bewirtschaftungspraktiken, einschliesslich der Anwendung von Düngemitteln, soziale Akzeptanz usw.). Diese Analyse eignet sich am besten als Ausgangspunkt für partizipative Bewertungen und zur Diskussion über die Auswirkungen des Klimawandels mit lokalen Akteuren."
+        },
+        {
+            "KEY":      "foot:ref:label",
+            "English":  "References:",
+            "Français": "Références:",
+            "Deutsch":  "Referenzen:"
+        },
+        {
+            "KEY":      "foot:ref:cru4",
+            "English":  "<em>- Observed climate: CRU TS4 monthly data at ~50km (0.5º) spatial resolution. Data @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> and <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>",
+            "Français": "<em>- Climat observé: Données mensuelles CRU TS4 à une résolution spatiale de ~50 km (0,5º). Données @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> et <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>",
+            "Deutsch":  "<em>- Beobachtetes Klima: CRU TS4 Monatsdaten mit einer räumlichen Auflösung von ~50km (0.5º). Daten @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> und <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>"
+        },
+        {
+            "KEY":      "foot:ref:cmip6",
+            "English":  "<em>- Projected climate: CMIP6 model ensembles at ~180km (1.25-1.88º) spatial resolution, downscaled to CRU TS4 (∆-change 1991:2020). Data @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> and <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>",
+            "Français": "<em>- Climat projeté: Modèles CMIP6 à une résolution spatiale de ~180 km (1,25-1,88º), ramenés à l'échelle du CRU TS4 (∆-change 1991:2020). Données @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> et <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>",
+            "Deutsch":  "<em>- Projiziertes Klima: CMIP6-Modell-Ensembles mit ~180km räumlicher Auflösung (1.25-1.88º), herunterskaliert auf CRU TS4 (∆-change 1991:2020). Daten @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> und <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>"
+        },
+        {
+            "KEY":      "foot:ref:ecocrop:db",
+            "English":  "<em>- EcoCrop Database: climatic requirements of crops from <a href=https://gaez.fao.org/pages/ecocrop target=_blank>FAO's EcoCrop database</a>, provided by the R package <a href=https://CRAN.R-project.org/package=dismo target=_blank>dismo</a></em>",
+            "Français": "<em>- Base de données EcoCrop: exigences climatiques des cultures à partir de la <a href=https://gaez.fao.org/pages/ecocrop target=_blank>base de données EcoCrop de l'FAO</a>, fournie par le paquet R <a href=https://CRAN.R-project.org/package=dismo target=_blank>dismo</a></em>",
+            "Deutsch":  "<em>- EcoCrop Datenbank: klimatische Anforderungen von Kulturpflanzen aus <a href=https://gaez.fao.org/pages/ecocrop target=_blank>FAO's EcoCrop Datenbank</a>, bereitsgestellt durch das R-Paket <a href=https://CRAN.R-project.org/package=dismo target=_blank>dismo</a></em>"
+        },
+        {
+            "KEY":      "foot:ref:ecocrop:idx",
+            "English":  "<em>- EcoCrop Index: Model developed by Hijmanns et al. (2001) to calculate the climate suitability of crops, described by <a href=https://doi.org/10.1016/j.agrformet.2011.09.005 target=_blank>Ramirez-Villegas et al. (2013)</a> and available in the R package <a href=https://CRAN.R-project.org/package=dismo target=_blank>dismo</a> (code adapted)</em>",
+            "Français": "<em>- Indice EcoCrop: modèle développé par Hijmanns et al. (2001) pour calculer l'adéquation climatique des cultures, décrit par <a href=https://doi.org/10.1016/j.agrformet.2011.09.005 target=_blank>Ramirez-Villegas et al. (2013)</a> et disponible dans le paquet R <a href=https://CRAN.R-project.org/package=dismo target=_blank>dismo</a> (code adapté)</em>",
+            "Deutsch":  "<em>- EcoCrop Index: von Hijmanns et al. (2001) entwickeltes Modell zur Berechnung der Klimaeignung von Kulturpflanzen, beschrieben von <a href=https://doi.org/10.1016/j.agrformet.2011.09.005 target=_blank>Ramirez-Villegas et al. (2013)</a> und verfügbar im R-Paket <a href=https://CRAN.R-project.org/package=dismo target=_blank>dismo</a> (Code angepasst)</em>"
+        },
+        {
+            "KEY":      "foot:ref:ccor",
+            "English":  "<em>- Climate Corridor Approach: Caritas' approach to illustrate climate-related changes in the cultivation suitability of crops, developed by <a http://doi.org/10.1108/ijccsm-12-2016-0183 target=_blank>Orlowsky et al. (2017)</a></em>",
+            "Français": "<em>- Approche Corridor Climatique: approche der Caritas pour illustrer les changements d'aptitude des cultures liés au climat, développée par <a http://doi.org/10.1108/ijccsm-12-2016-0183 target=_blank>Orlowsky et al. (2017)</a>.</em>",
+            "Deutsch":  "<em>- Klimakorridor-Ansatz: Caritas' Ansatz zur Veranschaulichung klimabedingter Veränderungen der Anbaueignung, entwickelt von <a http://doi.org/10.1108/ijccsm-12-2016-0183 target=_blank>Orlowsky et al. (2017)</a></em>"
+        },
+        {
+            "KEY":      "foot:disclaimer",
+            "English":  "<b>Disclaimer:</b> The author assumes no responsibility or liability for any errors or omissions in the content of this site. The information contained in this site is provided with no guarantees of completeness, accuracy, usefulness or timeliness.",
+            "Français": "<b>Avis de non-responsabilité:</b> L'auteur n'assume aucune responsabilité en cas d'erreurs ou d'omissions dans le contenu de ce site. Les informations contenues sont fournies sans garantie d'exhaustivité, d'exactitude, d'utilité ou d'actualité.",
+            "Deutsch":  "<b>Haftungsausschluss:</b> Der Autor übernimmt keine Haftung für etwaige Fehler oder Auslassungen im Inhalt dieser Website. Die Informationen werden ohne Garantie auf Vollständigkeit, Richtigkeit, Nützlichkeit oder Aktualität bereitgestellt."
+        }
+    ]
+}
