@@ -8,6 +8,9 @@
 # Konfigurieren von rsconnect: https://shiny.posit.co/r/articles/share/shinyapps/
 # rsconnect::deployApp(appFileManifest="appFileManifest.txt", appName="climapp")
 # rsconnect::showLogs(streaming = TRUE)
+#
+# Manifest ür Posit Connect Cloud (deployment via GitHub Repo https://github.com/ogardi/climapp)
+# rsconnect::writeManifest()
 
 # options(shiny.fullstacktrace = TRUE)
 
