@@ -146,7 +146,7 @@ month.seq <- function(start, end){
   while(sum(fail) > 0 & i <= 3) {
     Sys.sleep(2)
     cat(file=stderr(), paste0(i, ". KNMI request (", sum(fail), "/", length(resps), " fields) ... \n"))
-    resps[fail] <- reqs[fail] %>% req_perform_parallel(on_error="continue", max_active = 10)
+    resps[fail] <- reqs[fail] %>% req_perform_parallel(on_error="continue", max_active = 8)
     fail <- vapply(resps, inherits, "error", FUN.VALUE = logical(1))
     i = i + 1
   }
