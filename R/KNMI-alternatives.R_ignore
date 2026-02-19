@@ -1,0 +1,229 @@
+################################################################################
+# KNMI Alternativen für Datenbezug (CRU TS und CMIP6)
+# ==============================================================================
+#
+# Allg. Artikel / Webseiten zum Thema ------------------------------------------
+#
+# https://medium.com/pangeo/cmip6-in-the-cloud-five-ways-96b177abe396
+
+
+# Google/Pangeo Zarr-Dateien mit stars einlesen --------------------------------
+#
+# Siehe https://r-spatial.org/r/2022/09/13/zarr.html
+#
+# Dauert rund 10 Sekunden je Modell, d.h. rund 40 Minuten für 2 Variablen in 
+# 4 Szenarien à je etwa 30 Modelle. Evtl. mittels Parallelisierung zu 
+# Beschleunigen? Zudem: dürfte ziemlich herausfordernd sein die richtigen 
+# Koordinaten zu extrahieren
+
+# 2. GDAL-Konfiguration für S3/HTTP (global für alle Worker setzen)
+# Tipp: Nutzen Sie 'vsis3' für private Buckets oder 'vsicurl' für öffentliche URLs
+Sys.setenv(GDAL_HTTP_VERSION = "2")  # Beschleunigt parallele Requests
+Sys.setenv(GDAL_DISABLE_READDIR_ON_OPEN = "EMPTY_DIR")
+
+library(stars)
+library(ggplot2)
+library(units)
+library(doParallel)
+
+cl <- makeCluster(4)
+registerDoParallel(cl)
+
+
+dsns = c('ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/CSIRO-ARCCSS/ACCESS-CM2/ssp370/r1i1p1f1/Amon/tas/gn/v20191108"/:psl.zarr/', 
+         'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/CSIRO-ARCCSS/ACCESS-CM2/ssp370/r1i1p1f1/Amon/pr/gn/v20191108"/:psl.zarr/',
+         'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-CM4/ssp245/r1i1p1f1/Amon/pr/gr1/v20180701"/:psl.zarr/',
+         'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-CM4/ssp585/r1i1p1f1/Amon/pr/gr1/v20180701"/:psl.zarr/',
+         'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp370/r1i1p1f1/Amon/pr/gr1/v20180701"/:psl.zarr/')
+
+punkt_sf <- st_sfc(st_point(c(8.5, 47.3)), crs = 4326)
+
+start <- Sys.time()
+
+r <- foreach(dsn = dsns, .packages = "stars") %dopar% {
+  
+#ret = gdal_utils("mdiminfo", dsn, quiet = TRUE)
+#jsonlite::fromJSON(ret)$dimensions
+
+d = read_mdim(dsn, proxy=TRUE)
+
+
+#d = read_mdim(dsn, offset = c(0, 0, 0), count = c(4, 4, NA))
+st_crs(d) = "EPSG:4326"
+# st_crs(d) = 'OGC:CRS84'
+st_extract(d, punkt_sf)
+
+}
+
+print(Sys.time() - start)
+
+stopCluster(cl)
+
+df <- as.data.frame(p)
+
+ggplot(df, aes(x = time, y = pr)) +
+  geom_line() +
+  labs(title = "Zeitreihe an gewählter Koordinate")
+
+
+# Versuche Google ZARR Dateien direkt mit GDAL zu lesen ------------------------
+
+# direkt mit gdallocationinfo ...
+
+start = Sys.time()
+system("/opt/homebrew/bin/gdallocationinfo 'ZARR:\"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/CSIRO-ARCCSS/ACCESS-CM2/ssp370/r1i1p1f1/Amon/tas/gn/v20191108\":/tas' 80 80")
+Sys.time() - start
+
+# ... dauert ebenfalls rund 10 Sekunden
+# Ebenso das Lesen über Library "gdalraster". Auch Parallelisierung bringt
+# kein Zeitgewinn. Komisch!? Liegt der Bottleneck bei der HTTP Verbindung?
+
+library(gdalraster)
+
+set_config_option("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")
+set_config_option("GDAL_HTTP_MERGE_CONSECUTIVE_RANGES", "YES")
+set_config_option("PL_VSIL_CURL_ALLOWED_EXTENSIONS", ".zarray,.zgroup,.zmetadata,.zattrs")
+
+dsn <- 'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/CSIRO-ARCCSS/ACCESS-CM2/ssp370/r1i1p1f1/Amon/tas/gn/v20191108":/tas'
+start = Sys.time()
+ds <- new(GDALRaster, dsn, read_only = TRUE)
+r <- pixel_extract(raster=ds, xy=c(30,30))
+ds$close()
+Sys.time() - start
+
+library(future.apply)
+
+dsn = c('ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/CSIRO-ARCCSS/ACCESS-CM2/ssp370/r1i1p1f1/Amon/tas/gn/v20191108":/tas',
+        'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/CSIRO-ARCCSS/ACCESS-CM2/ssp370/r1i1p1f1/Amon/pr/gn/v20191108":/pr',
+        'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-CM4/ssp245/r1i1p1f1/Amon/pr/gr1/v20180701":/pr',
+        'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-CM4/ssp585/r1i1p1f1/Amon/pr/gr1/v20180701":/pr',
+        'ZARR:"/vsicurl/https://storage.googleapis.com/cmip6/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp370/r1i1p1f1/Amon/pr/gr1/v20180701":/pr')
+
+# plan(sequential)
+plan(multisession, workers = 8)
+
+start = Sys.time()
+results = future_lapply(dsn, function(path) {
+  ds <- new(GDALRaster, path, read_only = TRUE)
+  r <- pixel_extract(raster=ds, xy=c(30,30))
+  ds$close()
+  return(r)
+}, future.seed = TRUE)
+Sys.time() - start
+
+# bzw.
+
+library(doParallel)
+
+cl <- makeCluster(8)
+registerDoParallel(cl)
+
+start = Sys.time()
+foreach(path = dsn, .packages = "gdalraster") %dopar% {
+  ds <- new(GDALRaster, path, read_only = TRUE)
+  pixel_extract(raster=ds, xy=c(30,30))
+}
+Sys.time() - start
+
+
+# Google/Pangeo mittels Python (intake_esm, xarray) ----------------------------
+# 
+# Siehe: https://pangeo-data.github.io/pangeo-cmip6-cloud/accessing_data.html
+#        https://gallery.pangeo.io/repos/pangeo-gallery/cmip6/
+#
+# Umständlich (in Python, reticulate) und dauert ebenfalls (zu) lange
+
+# import gcsfs
+# import intake_esm
+# import intake
+# import xarray as xr
+# import pandas as pd
+# 
+# # 1. Pangeo CMIP6 Katalog laden
+# col_url = "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
+# col = intake.open_esm_datastore(col_url)
+# 
+# col
+# col.df.head()
+# 
+# 
+# # 2. Suche nach spezifischen Modellen und Variablen
+# query = dict(experiment_id=['ssp126', 'ssp245', 'ssp370', 'ssp585'],
+#              table_id='Amon',
+#              variable_id=['tas', 'prc'],
+#              member_id = 'r1i1p1f1',
+#              grid_label='gn')
+# # subset catalog and get some metrics grouped by 'source_id'
+# col_subset = col.search(require_all_on=['source_id'], **query)
+# col_subset = col.search(**query)
+# col_subset.df.groupby('source_id')[['experiment_id', 'variable_id', 'table_id']].nunique()
+# 
+# # 3. Daten in ein Xarray-Dataset laden (lazy loading via Dask)
+# dsets = col_subset.to_dataset_dict(zarr_kwargs={'consolidated': True}, skip_on_error=True)
+# 
+# # 4. Extraktion für einen Standort (z.B. Berlin: Lat 52.5, Lon 13.4)
+# target_lat = 52.5
+# target_lon = 13.4
+# 
+# results = []
+# for name, ds in dsets.items():
+#   # Punkt-Extraktion mit Nearest-Neighbor-Interpolation
+#   # Hinweis: CMIP6 nutzt oft 0-360 Längengrade
+#   lon_adj = target_lon if target_lon >= 0 else 360 + target_lon
+# 
+# ds_point = ds.sel(lat=target_lat, lon=lon_adj, method='nearest').load()
+# 
+# # In Pandas DataFrame umwandeln für einfache Weiterverarbeitung
+# df = ds_point.tas.to_dataframe().reset_index()
+# df['model'] = ds.attrs['source_id']
+# results.append(df)
+# 
+# # 5. Zusammenführen aller Modelle
+# final_df = pd.concat(results)
+# print(final_df.head())
+
+# Daten von ESGF-Node mit epwshiftr --------------------------------------------
+
+# Siehe: https://github.com/ideas-lab-nus/epwshiftr
+
+# Sieht interessant aus. Kann aber nicht installiert werden (nicht auf CRAN) 
+# und ESGF-Datendownload scheint manuell, ganze Dateien.
+
+# Daten von Copernicus CDS mit download_cmip6_ecmwfr ---------------------------
+
+# Siehe: https://search.r-project.org/CRAN/refmans/chillR/html/download_cmip6_ecmwfr.html
+# CDS User ID and API key: https://cds.climate.copernicus.eu/profile
+
+# Dauert rund 40 Sekunden je Modell, für drei Variablen. Möglichkeit
+
+library(dplyr)
+library(chillR)
+
+# 1 spezifische Datei: rund 40 Sekunden
+start <- Sys.time()
+download_cmip6_ecmwfr(
+  scenarios = 'ssp370', 
+  area = c(47.2, 7.2, 47.1, 7.3), # max-lat, min-lon, min-lat, max-lon
+  user = 'oliver.gardi@gmail.com',
+  key = 'f80925c8-83c9-45b0-837a-952dbb0bcd60',
+  model = 'AWI-CM-1-1-MR',
+  frequency = 'monthly', 
+  variable = c('Prec'),
+  year_start = 2015, 
+  year_end = 2100)
+print(Sys.time() - start)
+
+# 17 Dateien: 
+start <- Sys.time()
+download_cmip6_ecmwfr(
+  scenarios = 'ssp370', 
+  area = c(47.2, 7.2, 47.1, 7.3), # max-lat, min-lon, min-lat, max-lon
+  user = 'oliver.gardi@gmail.com',
+  key = 'f80925c8-83c9-45b0-837a-952dbb0bcd60',
+  model = 'AWI-CM-1-1-MR',
+  frequency = 'monthly', 
+  variable = c('Tmax', "Tmin"),
+  year_start = 2015, 
+  year_end = 2100)
+print(Sys.time() - start)
+

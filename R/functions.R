@@ -5,6 +5,12 @@
 # Author: oliver.gardi@gmail.com
 # Date:   August 2023
 
+# CRU TS 0.5 grid cell series
+# https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.09/ge/grid05/cells/N2.5E32.5/tmp/N4.25E31.75.tmp.txt
+# https://crudata.uea.ac.uk/cru/data/hrg/cru_ts_4.09/ge/grid05/cells/N2.5E32.5/pre/N4.25E31.75.pre.txt
+
+
+
 
 # Default location ============================================================
 # from downloaded location Lucerne.zip
@@ -140,7 +146,7 @@ month.seq <- function(start, end){
   while(sum(fail) > 0 & i <= 3) {
     Sys.sleep(2)
     cat(file=stderr(), paste0(i, ". KNMI request (", sum(fail), "/", length(resps), " fields) ... \n"))
-    resps[fail] <- reqs[fail] %>% req_perform_parallel(on_error="continue", max_active = 4)
+    resps[fail] <- reqs[fail] %>% req_perform_parallel(on_error="continue", max_active = 10)
     fail <- vapply(resps, inherits, "error", FUN.VALUE = logical(1))
     i = i + 1
   }
