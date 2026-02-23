@@ -327,9 +327,9 @@
         },
         {
             "KEY":      "loc:new:warning-1",
-            "English":  "Latitude (Lat) und Longitude (Lon) in decimal format: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Be aware:</b> Extracting and downloading data from the KNMI server takes up to 15 minutes. Historical data is only available for land areas.",
-            "Français": "Latitude (Lat) et longitude (Lon) au format décimal: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Attention:</b> L'extraction et le téléchargement des données du serveur KNMI peuvent prendre jusqu'à 15 minutes. Les données historiques ne sont disponibles que pour les surfaces terrestres.",
-            "Deutsch":  "Breitengrad (Lat) und Längengrad (Lon) im Dezimalformat: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Achtung:</b> Das Extrahieren und Herunterladen von Daten vom KNMI-Server kann bis zu 15 Minuten dauern. Historische Daten sind nur für Landflächen verfügbar."
+            "English":  "Latitude (Lat) und Longitude (Lon) in decimal format: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Be aware:</b> Extracting and downloading data from the KNMI Climate Explorer takes up to 15 minutes. Historical data is only available for land areas.",
+            "Français": "Latitude (Lat) et longitude (Lon) au format décimal: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Attention:</b> L'extraction et le téléchargement des données du NMI Climate Explorer peuvent prendre jusqu'à 15 minutes. Les données historiques ne sont disponibles que pour les surfaces terrestres.",
+            "Deutsch":  "Breitengrad (Lat) und Längengrad (Lon) im Dezimalformat: <a href=https://www.latlong.net target=_blank>https://www.latlong.net</a><br><br><b>Achtung:</b> Das Extrahieren und Herunterladen von Daten vom NMI Climate Explorer kann bis zu 15 Minuten dauern. Historische Daten sind nur für Landflächen verfügbar."
         },
         {
             "KEY":      "loc:new:spinner",
@@ -339,9 +339,9 @@
         },
         {
             "KEY":      "loc:new:warning-2",
-            "English":  "Please be patient. Extraction and download of data from the KNMI server takes up to 15 minutes. <br> If the connection is lost, try again with the same coordinates.",
-            "Français": "Veuillez patienter. L'extraction et le téléchargement des données du serveur KNMI peuvent prendre jusqu'à 15 minutes. <br> Si la connexion est interrompue, réessayez avec les mêmes coordonnées.",
-            "Deutsch":  "Bitte haben Sie etwas Geduld. Das Extrahieren und Herunterladen von Daten vom KNMI-Server kann bis zu 15 Minuten dauern. <br> Falls die Verbindung abbricht versuchen Sie es erneut mit denselben Koordinaten."
+            "English":  "Please be patient. Extraction and download of data from the KNMI Climate Explorer takes up to 15 minutes. <br> If the connection is lost, try again with the same coordinates.",
+            "Français": "Veuillez patienter. L'extraction et le téléchargement des données du KNMI Climate Explorer peuvent prendre jusqu'à 15 minutes. <br> Si la connexion est interrompue, réessayez avec les mêmes coordonnées.",
+            "Deutsch":  "Bitte haben Sie etwas Geduld. Das Extrahieren und Herunterladen von Daten vom KNMI Climate Explorer kann bis zu 15 Minuten dauern. <br> Falls die Verbindung abbricht versuchen Sie es erneut mit denselben Koordinaten."
         },
         {
             "KEY":      "loc:new:save:title",
@@ -351,9 +351,9 @@
         },
         {
             "KEY":      "loc:new:save:message",
-            "English":  "A saved location can be loaded much faster than if you extract it again from the KNMI server. Download the location to your computer if you want to analyse it again at a later time.",
-            "Français": "Une position enregistrée peut être chargée beaucoup plus rapidement que si vous l'extrayez de nouveau du serveur KNMI. Téléchargez la position sur votre ordinateur si vous souhaitez l'analyser à nouveau ultérieurement.",
-            "Deutsch":  "Ein gespeicherter Standort kann viel schneller geladen werden, als wenn Sie ihn erneut vom KNMI-Server extrahieren. Laden Sie den Standort auf Ihren Computer herunter, wenn Sie ihn zu einem späteren Zeitpunkt erneut analysieren möchten."
+            "English":  "A saved location can be loaded much faster than if you extract it again from the NMI Climate Explorer. Download the location to your computer if you want to analyse it again at a later time.",
+            "Français": "Une position enregistrée peut être chargée beaucoup plus rapidement que si vous l'extrayez de nouveau du NMI Climate Explorer. Téléchargez la position sur votre ordinateur si vous souhaitez l'analyser à nouveau ultérieurement.",
+            "Deutsch":  "Ein gespeicherter Standort kann viel schneller geladen werden, als wenn Sie ihn erneut vom NMI Climate Explorer extrahieren. Laden Sie den Standort auf Ihren Computer herunter, wenn Sie ihn zu einem späteren Zeitpunkt erneut analysieren möchten."
         },
         {
             "KEY":      "loc:new:download:spinner-1",
@@ -771,15 +771,15 @@
         },
         {
             "KEY":      "foot:ref:cru4",
-            "English":  "<em>- Observed climate: CRU TS4 monthly data at ~50km (0.5º) spatial resolution. Data @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> and <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>",
-            "Français": "<em>- Climat observé: Données mensuelles CRU TS4 à une résolution spatiale de ~50 km (0,5º). Données @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> et <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>",
-            "Deutsch":  "<em>- Beobachtetes Klima: CRU TS4 Monatsdaten mit einer räumlichen Auflösung von ~50km (0.5º). Daten @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> und <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>"
+            "English":  "<em>- Observed climate: CRU TS4 monthly data at ~50km (0.5º) spatial resolution. Data @ KNMI Climate Explorer: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> and <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>",
+            "Français": "<em>- Climat observé: Données mensuelles CRU TS4 à une résolution spatiale de ~50 km (0,5º). Données @ KNMI Climate Explorer: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> et <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>",
+            "Deutsch":  "<em>- Beobachtetes Klima: CRU TS4 Monatsdaten mit einer räumlichen Auflösung von ~50km (0.5º). Daten @ KNMI Climate Explorer: <a href=https://climexp.knmi.nl/select.cgi?field=cru4_tmp target=_blank>cru4_tmp</a> und <a href=https://climexp.knmi.nl/select.cgi?field=cru4_pre target=_blank>cru4_pre</a></em>"
         },
         {
             "KEY":      "foot:ref:cmip6",
-            "English":  "<em>- Projected climate: CMIP6 model ensembles at ~180km (1.25-1.88º) spatial resolution, downscaled to CRU TS4 (∆-change 1991:2020). Data @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> and <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>",
-            "Français": "<em>- Climat projeté: Modèles CMIP6 à une résolution spatiale de ~180 km (1,25-1,88º), ramenés à l'échelle du CRU TS4 (∆-change 1991:2020). Données @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> et <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>",
-            "Deutsch":  "<em>- Projiziertes Klima: CMIP6-Modell-Ensembles mit ~180km räumlicher Auflösung (1.25-1.88º), herunterskaliert auf CRU TS4 (∆-change 1991:2020). Daten @ KNMI: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> und <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>"
+            "English":  "<em>- Projected climate: CMIP6 model ensembles at ~180km (1.25-1.88º) spatial resolution, downscaled to CRU TS4 (∆-change 1991:2020). Data @ KNMI Climate Explorer: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> and <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>",
+            "Français": "<em>- Climat projeté: Modèles CMIP6 à une résolution spatiale de ~180 km (1,25-1,88º), ramenés à l'échelle du CRU TS4 (∆-change 1991:2020). Données @ KNMI Climate Explorer: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> et <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>",
+            "Deutsch":  "<em>- Projiziertes Klima: CMIP6-Modell-Ensembles mit ~180km räumlicher Auflösung (1.25-1.88º), herunterskaliert auf CRU TS4 (∆-change 1991:2020). Daten @ KNMI Climate Explorer: <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_tas_mon_mod_ssp126 target=_blank>cmip6_tas</a> und <a href=https://climexp.knmi.nl/select.cgi?id=someone@somewhere&field=cmip6_pre_mon_mod_ssp126 target=_blank>cmip6_pre</a></em>"
         },
         {
             "KEY":      "foot:ref:ecocrop:db",
